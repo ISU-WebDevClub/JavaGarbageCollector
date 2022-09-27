@@ -3,6 +3,10 @@
 # Temporary Folders/Files
 tmp
 
+# Package Lock Files
+package.json
+package-lock.json
+
 # dependencies
 /node_modules
 /.pnp
