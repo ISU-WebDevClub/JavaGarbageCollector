@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
+import CardiZ from './Views/Card.js'
 
 function Layout() {
     return (
@@ -33,7 +34,7 @@ function Home(props) {
     return (
         <p>
             JSX from Home()
-            <br/>
+            <br />
             {props.value}
         </p>
     );
@@ -64,10 +65,10 @@ function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Layout />}>
-                    <Route index element={<Home value={"Prop"} />}/>
-                    <Route path="page1" element={<Page1 />}/>
-                    <Route path="page2" element={<Page2 />}/>
-                    <Route path="*" element={<Ono />}/>
+                    <Route index element={<Home value={"Prop"} />} />
+                    <Route path="page1" element={<Page1 />} />
+                    <Route path="page2" element={<Page2 />} />
+                    <Route path="*" element={<Ono />} />
                 </Route>
             </Routes>
         </BrowserRouter>
@@ -77,9 +78,6 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <h1>
-            Hello, World!
-        </h1>
-        <App />
+        <CardiZ image="TestImageURL" title="MemeTitle" desc="MemeDescription" />
     </React.StrictMode>
 );
